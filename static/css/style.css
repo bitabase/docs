@@ -1,0 +1,285 @@
+main > div > heading > h1 {
+  background-color: rgb(41 41 41);
+  color: white;
+  padding: 0.625rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgb(29, 29, 29);
+  min-height: 100%;
+}
+
+body {
+  background-color: white;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  line-height: 1.5rem;
+}
+
+.thin {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 > small {
+  margin-top: 5px;
+  font-size: 70%;
+  font-weight: 100;
+  display: block;
+}
+
+.content hr {
+  margin: 3.125rem 0 3.125rem 0;
+}
+
+.content img {
+  width: 100%;
+}
+
+.content {
+  padding-top: 20px;
+}
+
+/*
+  SIDEBAR
+*/
+.with-sidebar {
+}
+
+.with-sidebar > * {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  margin: 0 auto 0 auto;
+}
+
+.with-sidebar > * > * {
+  margin: calc(0.625rem / 2);
+  flex-basis: 16.875rem;
+  flex-grow: 1;
+}
+
+.with-sidebar > * > :first-child {
+  display: none;
+}
+
+.with-sidebar > * > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(50% - 0.625rem);
+}
+
+@media (min-width: 37.5rem) {
+  .with-sidebar > * > :first-child {
+    display: inherit;
+  }
+}
+
+sidebar {
+  height: fit-content;
+  padding: 0.625rem;
+}
+
+sidebar ul,
+sidebar ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+sidebar > ul > li {
+  margin-top: 1.25rem;
+}
+sidebar > ul > li > span {
+  font-weight: bold;
+}
+
+sidebar > ul > li > ul > li {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
+  padding: 0.1875rem 0.1875rem 0.1875rem 1.25rem;
+}
+
+sidebar > ul > li > ul > li > span:first-child {
+  width: 3ch;
+  color: grey;
+  display: inline-block;
+}
+
+heading > h1 {
+  padding: 0.625rem;
+  margin: 0;
+}
+
+.content-heading {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+/*
+  TABLES
+*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table td {
+  padding: 0.4375rem;
+  border: 0.0625rem solid #dfe2e5;
+}
+
+table tr > th {
+  padding: 0.3125rem;
+  text-align: left;
+}
+
+/*
+  CONTENT
+*/
+.content-info {
+  display: flex;
+  padding: 0.3125rem 0.625rem 0.3125rem 0.625rem;
+  margin: -0.625rem -0.625rem 1.25rem -0.625rem;
+  background-color: #f5f5f5;
+}
+
+.content-info > *:first-child {
+  flex-grow: 1;
+}
+
+/*
+  TEXT
+*/
+blockquote {
+  background-color: rgba(255,229,100,.3);
+  border-left: 0.5rem solid #ffe564;
+  padding: 0.9375rem 1.875rem 0.9375rem 0.9375rem;
+  margin: 0.9375rem 0 1rem;
+}
+
+blockquote > p {
+  margin: 0;
+  padding: 0;
+}
+
+.block-danger {
+  background-color: rgb(255 100 100 / 30%);
+  border-left: 8px solid #ff6479;
+  padding: 15px 30px 15px 15px;
+  margin: 15px 0 16px;
+}
+
+pre > code {
+  font-size: 110% !important;
+  background-color: rgba(0, 0, 0, 0.03) !important;
+  padding: 0.625rem !important;
+}
+
+.edit-page {
+  padding-left: 1.5625rem;
+
+  background-image: url(/img/github-mark.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 1.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: rgb(29, 29, 29);
+  }
+
+  body {
+    background-color: rgb(41, 41, 41);
+    color: white;
+  }
+
+  main > div > heading > h1 {
+    background-color: rgb(41, 41, 41);
+    color: white;
+  }
+
+  .content-heading {
+    background-color: rgb(41, 41, 41);
+  }
+
+  .content-info {
+    background-color: rgb(50, 50, 50);
+  }
+
+  blockquote {
+    background-color: rgba(255, 229, 100, 0.3);
+    border-left: 8px solid #ffe564;
+  }
+
+  .block-danger {
+    background-color: rgb(255, 100, 100, 0.3);
+    border-left: 8px solid #ff6479;
+  }
+
+  pre > code {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  a {
+    color: #9ecfff;
+  }
+
+  a:hover {
+    color: #c0e7ff;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    background-color: rgb(255, 255, 255);
+  }
+
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  main > div > heading > h1 {
+    background-color: white;
+    color: black;
+  }
+
+  .content-heading {
+    background-color: white;
+  }
+
+  .content-info {
+    background-color: #f5f5f5;
+  }
+
+  blockquote {
+    background-color: rgba(255, 229, 100, 0.3);
+    border-left: 8px solid #ffe564;
+  }
+
+  .block-danger {
+    background-color: rgb(255, 100, 100, 0.3);
+    border-left: 8px solid #ff6479;
+  }
+
+  pre > code {
+    background-color: rgba(0, 0, 0, 0.03) !important;
+  }
+
+  a {
+    color: #0056b3;
+  }
+
+  a:hover {
+    color: #003d80;
+  }
+}

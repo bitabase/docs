@@ -1,0 +1,27 @@
+{
+  "name": "docsup",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -i dist -e md,js,css,html index.js & ws -p 9001 -d dist",
+    "build": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "glob": "^11.0.0",
+    "globby": "^14.0.2",
+    "hyperhtml": "^2.34.2",
+    "hyperx": "^3.0.1",
+    "local-web-server": "^5.4.0",
+    "marked": "^15.0.4",
+    "nodemon": "^3.1.9",
+    "vhtml": "^2.2.0",
+    "virtual-dom": "^2.1.1"
+  }
+}
